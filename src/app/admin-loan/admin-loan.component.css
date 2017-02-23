@@ -1,0 +1,41 @@
+.custom-checkbox
+{
+  margin-left: 10px;
+}
+
+.swedfont
+{
+  text-align: center;
+  font-size: 50px;
+  color: darkorange;
+  padding-bottom: 10px;
+}
+.swedbackground
+{
+  background-color: darkorange;
+}
+
+.basicfont
+{
+  font-size: 18px;
+}
+.button
+{
+  margin-top: 25px;
+  width: 120px;
+  height: 40px;
+  font-size: 14px;
+  margin-right: 18px;
+}
+.buttonmid
+{
+}
+.buttonleft
+{
+  margin-left: 35%;
+
+}
+.buttonright
+{
+
+}
