@@ -5,12 +5,14 @@ import {AppComponent} from "./app.component";
 import {RoutingModule} from "./routing.module";
 import {AdminLoanComponent} from './admin-loan/admin-loan.component';
 import {AdminLoanService} from "./admin-loan/admin-loan.service";
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLoanComponent
+    AdminLoanComponent,
+    FormComponent
   ],
   imports: [
     RoutingModule,
