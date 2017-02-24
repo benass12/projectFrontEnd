@@ -4,6 +4,7 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from "./app.component";
 import {RoutingModule} from "./routing.module";
 import {AdminLoanComponent} from './admin-loan/admin-loan.component';
+import {AdminLoanService} from "./admin-loan/admin-loan.service";
 
 
 @NgModule({
@@ -16,10 +17,8 @@ import {AdminLoanComponent} from './admin-loan/admin-loan.component';
     HttpModule,
     BrowserModule
 
-
-
   ],
-  providers: [],
+  providers: [AdminLoanService],
   bootstrap: [
     AppComponent
   ]

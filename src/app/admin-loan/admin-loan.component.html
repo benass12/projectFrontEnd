@@ -1,22 +1,21 @@
-
-<h1 class="swedfont"> Vartojimo paskola</h1>
-<table class="table table-striped basicfont admin-table">
+<h1 class="swedfont"> Consumer loan </h1>
+<table class="table table-striped basicfont admin-table"  >
   <thead class="swedbackground">
   <tr>
     <th><input type="checkbox" class="custom-checkbox"></th>
-    <th>Suma</th>
-    <th>Vartotojas</th>
-    <th>Statusas</th>
-    <th>Data</th>
+    <th>Amount</th>
+    <th>User</th>
+    <th>Status</th>
+    <th>Date</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
+  <tr *ngFor="let loan of loans">
     <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>500</td>
-    <td>Vilius Žukauskas</td>
-    <td>Patvirtinta</td>
-    <td>2016-06-18</td>
+    <td>loan.amount</td>
+    <td>loan.fullname</td>
+    <td>loan.status</td>
+    <td>loan.date</td>
 
   </tr>
   <tr>
@@ -36,13 +35,13 @@
   </tbody>
 </table>
 <button type="button" class="btn btn-primary buttonleft button">
-  Patvirtinti
+  Confirm
 </button>
 <button type="button" class="btn btn-primary button buttonmid">
-  Atmesti
+  Reject
 </button>
 <button type="button" class="btn btn-primary buttonright button">
-  Ištrinti
+  Delete
 </button>
 
 
