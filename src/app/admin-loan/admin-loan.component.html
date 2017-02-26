@@ -1,41 +1,23 @@
-<h1 class="swedfont"> Consumer loan </h1>
-<table class="table table-striped basicfont admin-table"  >
-  <thead class="swedbackground">
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <th>Amount</th>
-    <th>User</th>
-    <th>Status</th>
-    <th>Date</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let loan of loans">
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>loan.amount</td>
-    <td>loan.fullname</td>
-    <td>loan.status</td>
-    <td>loan.date</td>
+<h1 class="swedfont"> Loans</h1>
 
-  </tr>
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>1500 </td>
-    <td>Mykolas Banevicius</td>
-    <td>Atmesta</td>
-    <td>2017-02-22</td>
-  </tr>
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>10000 </td>
-    <td>Tadas Adomaitis</td>
-    <td>Nepatikrinta</td>
-    <td>2017-01-16</td>
-  </tr>
-  </tbody>
-</table>
+<div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+  <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+  <input #gb type="text" pInputText size="50" placeholder="Global Filter">
+</div>
+
+<p-dataTable [rows]="10" [paginator]="true" [pageLinks]="5"
+             [rowsPerPageOptions]="[5,10,20]" [value]="loans" [globalFilter]="gb" #dt>
+
+  <p-column field="amount" header="Amount" sortable="true"></p-column>
+  <p-column field="name" header="Name" sortable="true"></p-column>
+  <p-column field="status" header="Status" sortable="true"></p-column>
+  <p-column field="date" header="Date" sortable="true"></p-column>
+
+</p-dataTable>
+
+
 <button type="button" class="btn btn-primary buttonleft button">
-  Confirm
+  Patvirtinti
 </button>
 <button type="button" class="btn btn-primary button buttonmid">
   Reject

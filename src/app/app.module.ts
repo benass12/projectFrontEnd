@@ -6,19 +6,24 @@ import {RoutingModule} from "./routing.module";
 import {AdminLoanComponent} from './admin-loan/admin-loan.component';
 import {AdminLoanService} from "./admin-loan/admin-loan.service";
 import { FormComponent } from './form/form.component';
+import {LoginComponent} from "./login/login.component";
+import {InputTextModule,DataTableModule, SharedModule} from 'primeng/primeng';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoanComponent,
-    FormComponent
+    FormComponent,
+    LoginComponent
   ],
   imports: [
     RoutingModule,
     HttpModule,
-    BrowserModule
-
+    BrowserModule,
+    InputTextModule,
+    DataTableModule,
+    SharedModule
   ],
   providers: [AdminLoanService],
   bootstrap: [

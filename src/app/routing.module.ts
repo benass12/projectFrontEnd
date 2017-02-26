@@ -3,12 +3,13 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from "./app.component";
 import {AdminLoanComponent} from "./admin-loan/admin-loan.component";
 import {FormComponent} from "./form/form.component";
+import {LoginComponent} from "./login/login.component";
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: AppComponent
+    component: AdminLoanComponent
   },
   {
     path: 'admin',
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'form',
     component: FormComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
