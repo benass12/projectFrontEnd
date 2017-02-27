@@ -4,6 +4,7 @@ import {AppComponent} from "./app.component";
 import {AdminLoanComponent} from "./admin-loan/admin-loan.component";
 import {FormComponent} from "./form/form.component";
 import {LoginComponent} from "./login/login.component";
+import {CalculatorComponent} from "./calculator/calculator.component";
 
 
 const appRoutes: Routes = [
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'calculator',
+    component: CalculatorComponent
   }
 ];
 
