@@ -8,6 +8,7 @@ import {AdminLoanService} from "./admin-loan/admin-loan.service";
 import { FormComponent } from './form/form.component';
 import {LoginComponent} from "./login/login.component";
 import {InputTextModule,DataTableModule, ButtonModule, SharedModule} from 'primeng/primeng';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {InputTextModule,DataTableModule, ButtonModule, SharedModule} from 'prime
     AdminLoanComponent,
     FormComponent,
     LoginComponent,
+    CalculatorComponent,
   ],
   imports: [
     RoutingModule,
