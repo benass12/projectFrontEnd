@@ -9,27 +9,27 @@ import {AdminLoanService} from "./admin-loan.service";
 export class AdminLoanComponent {
 
   loans: any[] = [{
-    "amount": 150000,
+    "value": 150000,
     "name": 'Vilius Zukauskas',
     "status": 'Confirmed',
     "date": '2017-02-25'
   },
     {
-      "amount": 50000,
+      "value": 50000,
       "name": 'Mykolas kazkoks',
       "status": 'Rejected',
       "date": '2015-02-25'
     }
     ,
     {
-      "amount": 1000,
+      "value": 1000,
       "name": 'Vardenis pavardenis',
       "status": 'Patvirtinta',
       "date": '2016-01-27'
     }];
 
   cols: any[] = [
-    {field: 'amount', header: 'Amount', sortable: true},
+    {field: 'value', header: 'Amount', sortable: true},
     {field: 'name', header: 'Name'},
     {field: 'status', header: 'Status'},
     {field: 'date', header: 'Date'}

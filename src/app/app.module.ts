@@ -7,7 +7,7 @@ import {AdminLoanComponent} from './admin-loan/admin-loan.component';
 import {AdminLoanService} from "./admin-loan/admin-loan.service";
 import { FormComponent } from './form/form.component';
 import {LoginComponent} from "./login/login.component";
-import {InputTextModule,DataTableModule, SharedModule} from 'primeng/primeng';
+import {InputTextModule,DataTableModule, ButtonModule, SharedModule} from 'primeng/primeng';
 
 
 @NgModule({
@@ -15,11 +15,12 @@ import {InputTextModule,DataTableModule, SharedModule} from 'primeng/primeng';
     AppComponent,
     AdminLoanComponent,
     FormComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     RoutingModule,
     HttpModule,
+    ButtonModule,
     BrowserModule,
     InputTextModule,
     DataTableModule,
