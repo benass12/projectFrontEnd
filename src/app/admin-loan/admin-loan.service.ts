@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import {Http, Headers} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -16,7 +16,6 @@ export class AdminLoanService {
       .catch(this.handleError);
   }
 
-
   private handleError(error: any): Promise<any> {
     console.error('Klaida', error); // for demo purposes only
     return Promise.reject(error.message || error);
@@ -24,10 +23,8 @@ export class AdminLoanService {
 
 }
 
-export interface Loan {
-  amount;
-  fullname;
-  status;
-  date;
-}
+
+
+
+
 

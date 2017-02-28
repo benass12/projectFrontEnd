@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AdminLoanService} from "./admin-loan.service";
+import {Message} from "primeng/components/common/api";
 
 @Component({
   selector: 'admin-loan',
@@ -8,25 +9,12 @@ import {AdminLoanService} from "./admin-loan.service";
 })
 export class AdminLoanComponent {
 
-  loans: any[] = [{
-    "value": 150000,
-    "name": 'Vilius Zukauskas',
-    "status": 'Confirmed',
-    "date": '2017-02-25'
-  },
-    {
-      "value": 50000,
-      "name": 'Mykolas kazkoks',
-      "status": 'Rejected',
-      "date": '2015-02-25'
-    }
-    ,
-    {
-      "value": 1000,
-      "name": 'Vardenis pavardenis',
-      "status": 'Patvirtinta',
-      "date": '2016-01-27'
-    }];
+  loans: Loan[];
+  selectedRow: Loan;
+  error: any;
+  data: any;
+  msgs: Message[];
+  selectedLoan: Loan;
 
   cols: any[] = [
     {field: 'value', header: 'Amount', sortable: true},
@@ -35,18 +23,13 @@ export class AdminLoanComponent {
     {field: 'date', header: 'Date'}
   ];
 
-  error: any;
-  data: any;
-
 
   constructor(private adminLoanService: AdminLoanService) {
-    this.length = this.rows.length;
   }
 
   ngOnInit() {
     this.getLoans();
   }
-
 
   getLoans() {
     this.adminLoanService.getLoans()
@@ -59,42 +42,29 @@ export class AdminLoanComponent {
       });
   };
 
+  onRowSelect(event) {
+    this.selectedLoan = event.data;
+  }
 
-  public rows : any = [{
-    "amount": 150000,
-    "name": 'Vilius Zukauskas',
-    "status": 'Confirmed',
-    "date": '2017-02-25'
-  },
-    {
-      "amount": 50000,
-      "name": 'Mykolas kazkoks',
-      "status": 'Rejected',
-      "date": '2015-02-25'
+  public rejectRow(selection) {
+
+  }
+
+  public deleteRow(selection) {
+
+      for ( var _i = 0; _i < this.loans.length; _i++) {
+
+        if(selection === this.loans[_i])
+        {
+          delete this.loans[_i];
+        }
+      }
     }
-    ,
-    {
-      "amount": 1000,
-      "name": 'Vardenis pavardenis',
-      "status": 'Patvirtinta',
-      "date": '2016-01-27'
-    }];
-
-  public length:number = 0;
-
-  public config:any = {
-    paging: true,
-    className: ['table-striped', 'table-bordered']
-  };
+  }
 
 
 
 
-
-
-
-
-}
 
 
 

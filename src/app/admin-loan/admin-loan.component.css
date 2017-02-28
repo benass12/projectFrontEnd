@@ -4,6 +4,17 @@
   margin-left: 10px;
 }
 
+.pcollumn
+{
+  background-color: orange;
+}
+
+.myTable
+{
+  column-rule-color: darkorange;
+  background-color: darkorange;
+}
+
 .head-button
 {
   width: 80px;
@@ -28,7 +39,7 @@
 }
 .button
 {
-  margin-top: 25px;
+  padding-top: 25px;
   width: 120px;
   height: 40px;
   font-size: 14px;
