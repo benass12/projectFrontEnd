@@ -18,7 +18,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminLoanComponent
+    component: AdminLoanComponent,
+    canActivate: [LoggedInGuard]
   },
   {
     path: 'form',

@@ -22,4 +22,5 @@ class Loan {
   number2: number;
   email: string;
   inaftertaxes: number;
+  loancode: string;
   }

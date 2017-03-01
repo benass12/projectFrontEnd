@@ -6,25 +6,26 @@ import 'rxjs/add/operator/map'
 export class LoginService {
 
   private loggedIn = false;
+  private loan :Loan;
 
   constructor(private http: Http) {
     this.loggedIn = !!localStorage.getItem('auth_token');
   }
 
-  login(username, password) {
+  login(details) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-
+    headers.append('RequestMethod', 'POST');
 
     return this.http
       .post(
         'https://frozen-hamlet-97469.herokuapp.com/admin',
-        JSON.stringify({ username, password }),
+        {"username": "root","password":"root"},
         { headers }
       )
-      .map(res => res.json())
-      .map((res) => {
-        if (res.success) {
+.map(res => res.json())
+.map((res) => {
+  if (res.token) {
           localStorage.setItem('auth_token', res.token);
           this.loggedIn = true;
         }

@@ -46,21 +46,28 @@ export class AdminLoanComponent {
     this.selectedLoan = event.data;
   }
 
-  public rejectRow(selection) {
+  public reviewLoan()
+  {
+    var url = "/admin/" + this.selectedRow.loancode;
+    open(url);
+  }
+
+  public rejectRow() {
 
   }
 
-  public deleteRow(selection) {
+  public deleteRow() {
 
       for ( var _i = 0; _i < this.loans.length; _i++) {
 
-        if(selection === this.loans[_i])
+        if(this.selectedRow === this.loans[_i])
         {
-          delete this.loans[_i];
+           this.loans[_i];
+           this.loans.splice(_i,1);
+        }
         }
       }
     }
-  }
 
 
 
