@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <br>
 <img src="/assets/image/fb_share_img.png" alt="Swed-logo" style="width:205px;height:200px;" class="logo-marging-right">
+<body>
 <div class="container">
   <div class="row">
     <h2>Registration form</h2>
@@ -10,20 +12,20 @@
 
   <form class="form-horizontal">
     <fieldset>
-      <!--  Kiek saibu nori-->
+      <!--  Norimas pinigu kiekis-->
 
       <div class="form-group required">
         <label class="col-md-4 control-label" for="Loan amount"  >Loan amount</label>
         <div class="col-md-6" >
-          <input  name="number" type="number" min="100" max="1000"  class="form-control input-md" required="">
+          <input  name="loan-amount" type="number" min="300" max="30000"  class="form-control input-md" required="" #loanamount>
           <span class="help-block">EUR</span>
         </div>
       </div>
 
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="Loan term" required="true">Loan termn</label>
+        <label class="col-md-4 control-label" for="Loan term" required="true">Loan term</label>
         <div class="col-md-2" >
-          <select id="Years" name="Years" class="form-control forFieldsToChooseBCOLOR" required="true">
+          <select id="Years" name="Years" class="form-control forFieldsToChooseBCOLOR" required="true" #loanyear>
             <option value="0">Years</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -33,7 +35,7 @@
           </select>
         </div>
         <div class="col-md-2">
-          <select id="Month" name="Month" class="form-control forFieldsToChooseBCOLOR" required="true">
+          <select id="Month" name="Month" class="form-control forFieldsToChooseBCOLOR" required="true" #loanmonth>
             <option value="0">Month</option>
             <option value="1">January</option>
             <option value="2">February</option>
@@ -54,7 +56,7 @@
       <div class="form-group required">
         <label class="col-md-4 control-label"  for="Loan termn" required="true">Loan and interest repayment day</label>
         <div class="col-md-2">
-          <select id="Day" name="Day" class="form-control forFieldsToChooseBCOLOR" required="true">
+          <select id="Day" name="Day" class="form-control forFieldsToChooseBCOLOR" required="true" #loanday>
             <option value="0">Day</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -95,27 +97,27 @@
       <div class="form-group required">
         <label class="col-md-4 control-label" for="name" required="true">Name</label>
         <div class="col-md-6">
-          <input id="name" name="name"  class="form-control input-md" required="" type="text">
+          <input id="name" name="name"  class="form-control input-md" required="" type="text" #name>
         </div>
       </div>
       <!-- Pavarde-->
       <div class="form-group required">
         <label class="col-md-4 control-label" for="surname" required="true">Surname</label>
         <div class="col-md-6">
-          <input id="surname" name="surname"  class="form-control input-md" required="" type="text">
+          <input id="surname" name="surname"  class="form-control input-md" required="" type="text" #surname>
         </div>
       </div>
       <!-- Asmns kodas-->
       <div class="form-group required">
         <label class="col-md-4 control-label" for="code" required="true">Personal code</label>
         <div class="col-md-6">
-          <input id="code" name="code" type="number" maxlength="11"  class="form-control input-md" required="">
+          <input id="code" name="code" type="number" maxlength="11"  class="form-control input-md" required="" #personalcode>
         </div>
       </div>      <!-- Asmens dokumento tipas-->
       <div class="form-group required">
         <label class="col-md-4 control-label" for="code" required="true">Document type</label>
         <div class="col-md-6">
-          <select id="document" name="document"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR">
+          <select id="document" name="document"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #documenttype>
             <option value="0">Document type</option>
             <option value="1">Passport</option>
             <option value="2">Identity card</option>    </select>
@@ -124,7 +126,7 @@
       <div class="form-group required">
         <label class="col-md-4 control-label" for="tempatlahir" required="true">Document No.</label>
         <div class="col-md-6">
-          <input  class="form-control input-md" required="" type="number">
+          <input  class="form-control input-md" required="" type="number" #documentnumber>
         </div>
       </div>
 
@@ -136,7 +138,7 @@
       <div class="form-group required">
         <label class="col-md-4 control-label" for="code" required="true">Country</label>
         <div class="col-md-6">
-          <select id="country" name="country"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR">
+          <select id="country" name="country"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #country>
             <option value="0">Country</option>
             <option value="1">Lithuania</option>
             <option value="2">Latvia</option>
@@ -150,7 +152,7 @@
       <div class="form-group required">
         <label class="col-md-4 control-label" for="code" required="true">City or district</label>
         <div class="col-md-6">
-          <select id="City or district" name="City or district"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR">
+          <select id="City or district" name="City or district" placeholder="City or district"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #cord>
             <option value="0">City or district</option>
             <option value="1">Vilnius</option>
             <option value="2">Ryga</option>
@@ -162,9 +164,9 @@
 
       <!--Adresas-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="surname" required="true">Adddress</label>
+        <label class="col-md-4 control-label" for="surname" required="true">Address</label>
         <div class="col-md-6">
-          <input id="address" name="address"  class="form-control input-md" required="" type="text">
+          <input id="address" name="address"  class="form-control input-md" required="" type="text" #address>
         </div>
       </div>
       <!--Telefonas 1-->
@@ -172,7 +174,7 @@
       <div class="form-group required">
         <label class="col-md-4 control-label" for="code" required="true">Telephone 1</label>
         <div class="col-md-2">
-          <select name="countryCode" id="370" required="true"  class="form-control input-md forFieldsToChooseBCOLOR">
+          <select name="countryCode" id="370" required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #numberfront1>
             <option data-countryCode="LT" value="370" selected>Lithuania (+370)</option>
             <optgroup label="Other countries">
               <option data-countryCode="GB" value="44">UK (+44)</option>
@@ -395,7 +397,7 @@
         </div>
         <!--Numeris-->
         <div class="col-md-2">
-          <input id="telephone1" name="telephone1" class="col-4"  class="form-control input-md" required="" type="number">
+          <input id="telephone1" name="telephone1" class="col-4"  class="form-control input-md" required="" type="number" #number1>
         </div>
       </div>
 
@@ -404,7 +406,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="code" required="true">Telephone 2</label>
         <div class="col-md-2">
-          <select name="countryCode" id="+370" required="true"  class="form-control input-md forFieldsToChooseBCOLOR">
+          <select name="countryCode" id="+370" required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #numberfront2>
             <option data-countryCode="LT" value="370" selected>Lithuania (+370)</option>
             <optgroup label="Other countries">
               <option data-countryCode="GB" value="44">UK (+44)</option>
@@ -627,15 +629,15 @@
         </div>
         <!--Numeris2-->
         <div class="col-md-2">
-          <input id="telephone2" name="telephone2" class="col-4"  class="form-control input-md" required="" type="number">
+          <input id="telephone2" name="telephone2" class="col-4"  class="form-control input-md"  type="number" #number2>
         </div>
       </div>
 
       <!--Email-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="surname" required="true">E-mail</label>
+        <label class="col-md-4 control-label" >E-mail</label>
         <div class="col-md-6">
-          <input id="email" name="email"  class="form-control input-md" required="" type="text">
+          <input id="email" name="email"  class="form-control input-md"  type="text" #email>
         </div>
       </div>
 
@@ -643,7 +645,7 @@
       <div class="form-group required">
         <label class="col-md-4 control-label" for="Loan amount"  >Monthly income after taxes</label>
         <div class="col-md-6" >
-          <input  name="number" type="number"  class="form-control input-md" required="">
+          <input  name="number" type="number"  class="form-control input-md" required="" #inaftertaxes>
           <span class="help-block">EUR</span>
         </div>
       </div>
@@ -651,7 +653,9 @@
       <!--Button-->
       <div class="form-group" class="form-horizontal button-marging-right ">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn button2 button-size">
+          <button type="submit" class="btn button2 button-size" (click)="submitinfo(loanamount.value, loanyear.value, loanday.value, loanday.value,
+          name.value, surname.value, personalcode.value, documenttype.value, documentnumber.value, country.value, cord.value, address.value, numberfront1.value,
+          number1.value, numberfront2.value, number2.value, email.value, inaftertaxes.value)">
             <span class="glyphicon glyphicon-star"></span> Submit!
           </button>
         </div>
@@ -665,3 +669,4 @@
   </form>
 
 </div>
+</body>

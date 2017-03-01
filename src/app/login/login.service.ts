@@ -20,7 +20,7 @@ export class LoginService {
     return this.http
       .post(
         'https://frozen-hamlet-97469.herokuapp.com/admin',
-        {"username": "root","password":"root"},
+        JSON.stringify(details),
         { headers }
       )
 .map(res => res.json())

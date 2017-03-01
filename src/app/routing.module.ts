@@ -43,7 +43,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'adminT',
-    component: AdminTComponent
+    component: AdminTComponent,
+    canActivate: [LoggedInGuard]
   }
 ];
 
