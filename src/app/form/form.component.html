@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <br>
 <img src="/assets/image/fb_share_img.png" alt="Swed-logo" style="width:205px;height:200px;" class="logo-marging-right">
-<body>
+<header class="a-marging-right" >*Swedbank IT Academy Project</header>
+
+
 <div class="container">
   <div class="row">
     <h2>Registration form</h2>
@@ -15,17 +17,17 @@
       <!--  Norimas pinigu kiekis-->
 
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="Loan amount"  >Loan amount</label>
+        <label class="col-md-4 control-label" for="loanamount">Loan amount</label>
         <div class="col-md-6" >
-          <input  name="loan-amount" type="number" min="300" max="30000"  class="form-control input-md" required="" #loanamount>
+          <input  name="loanamount" type="number" min="300" max="30000"  class="form-control input-md" required=""  #loanamount>
           <span class="help-block">EUR</span>
         </div>
       </div>
 
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="Loan term" required="true">Loan term</label>
+        <label class="col-md-4 control-label" for="loanyear">Loan term</label>
         <div class="col-md-2" >
-          <select id="Years" name="Years" class="form-control forFieldsToChooseBCOLOR" required="true" #loanyear>
+          <select id="loanyear" name="loanyear" class="form-control forFieldsToChooseBCOLOR" required=""  #loanyear>
             <option value="0">Years</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -35,28 +37,31 @@
           </select>
         </div>
         <div class="col-md-2">
-          <select id="Month" name="Month" class="form-control forFieldsToChooseBCOLOR" required="true" #loanmonth>
-            <option value="0">Month</option>
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
+          <select id="loanmonth" name="loanmonth" class="form-control input-md forFieldsToChooseBCOLOR" required=""  #loanmonth>
+            <option value="">Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
           </select>
         </div>
       </div>
 
+
+
+
       <div class="form-group required">
-        <label class="col-md-4 control-label"  for="Loan termn" required="true">Loan and interest repayment day</label>
+        <label class="col-md-4 control-label"  for="loanday" >Loan and interest repayment day</label>
         <div class="col-md-2">
-          <select id="Day" name="Day" class="form-control forFieldsToChooseBCOLOR" required="true" #loanday>
+          <select id="loanday" name="loanday" class="form-control forFieldsToChooseBCOLOR" required=""  #loanday>
             <option value="0">Day</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -95,38 +100,39 @@
 
       <!-- Vardas-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="name" required="true">Name</label>
+        <label class="col-md-4 control-label" for="name" >Name</label>
         <div class="col-md-6">
-          <input id="name" name="name"  class="form-control input-md" required="" type="text" #name>
+          <input id="name" name="name"  class="form-control input-md" type="text" required="" #name>
         </div>
       </div>
       <!-- Pavarde-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="surname" required="true">Surname</label>
+        <label class="col-md-4 control-label" for="surname" >Surname</label>
         <div class="col-md-6">
-          <input id="surname" name="surname"  class="form-control input-md" required="" type="text" #surname>
+          <input id="surname" name="surname"  class="form-control input-md"  type="text" required="" #surname>
         </div>
       </div>
       <!-- Asmns kodas-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="code" required="true">Personal code</label>
+        <label class="col-md-4 control-label" for="personalcode" >Personal code</label>
         <div class="col-md-6">
-          <input id="code" name="code" type="number" maxlength="11"  class="form-control input-md" required="" #personalcode>
+          <input id="personalcode" name="personalcode" type="number" maxlength="11"  class="form-control input-md" required=""  #personalcode>
         </div>
       </div>      <!-- Asmens dokumento tipas-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="code" required="true">Document type</label>
+        <label class="col-md-4 control-label" for="documenttype" >Document type</label>
         <div class="col-md-6">
-          <select id="document" name="document"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #documenttype>
+          <select id="documenttype" name="documenttype"  class="form-control input-md forFieldsToChooseBCOLOR" required="" #documenttype>
             <option value="0">Document type</option>
-            <option value="1">Passport</option>
-            <option value="2">Identity card</option>    </select>
+            <option value="Passport">Passport</option>
+            <option value="Identity card">Identity card</option>
+          </select>
         </div>
       </div>        <!-- Dokumento numeris-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="tempatlahir" required="true">Document No.</label>
+        <label class="col-md-4 control-label" for="documentnumber">Document No.</label>
         <div class="col-md-6">
-          <input  class="form-control input-md" required="" type="number" #documentnumber>
+          <input id="documentnumber" name="documentnumber" class="form-control input-md"  type="number" required="" #documentnumber>
         </div>
       </div>
 
@@ -136,45 +142,45 @@
 
       <!--Salis-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="code" required="true">Country</label>
+        <label class="col-md-4 control-label" for="country" >Country</label>
         <div class="col-md-6">
-          <select id="country" name="country"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #country>
+          <select id="country" name="country"  required=""  class="form-control input-md forFieldsToChooseBCOLOR" required="" #country>
             <option value="0">Country</option>
-            <option value="1">Lithuania</option>
-            <option value="2">Latvia</option>
-            <option value="3">Estonia</option>
-            <option value="4">Sweden</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Sweden">Sweden</option>
           </select>
         </div>
       </div>
 
       <!--Regionas-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="code" required="true">City or district</label>
+        <label class="col-md-4 control-label" for="cord" >City or district</label>
         <div class="col-md-6">
-          <select id="City or district" name="City or district" placeholder="City or district"  required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #cord>
+          <select id="cord" name="cord"   required=""  class="form-control input-md forFieldsToChooseBCOLOR" #cord>
             <option value="0">City or district</option>
-            <option value="1">Vilnius</option>
-            <option value="2">Ryga</option>
-            <option value="3">Talin</option>
-            <option value="4">Stockholm</option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Ryga">Ryga</option>
+            <option value="Talin">Talin</option>
+            <option value="Stockholm">Stockholm</option>
           </select>
         </div>
       </div>
 
       <!--Adresas-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="surname" required="true">Address</label>
+        <label class="col-md-4 control-label" for="address" >Address</label>
         <div class="col-md-6">
-          <input id="address" name="address"  class="form-control input-md" required="" type="text" #address>
+          <input id="address" name="address"  class="form-control input-md" required=""  type="text" #address>
         </div>
       </div>
       <!--Telefonas 1-->
       <!-- country codes (ISO 3166) and Dial codes. -->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="code" required="true">Telephone 1</label>
+        <label class="col-md-4 control-label" for="numberfront1" >Telephone 1</label>
         <div class="col-md-2">
-          <select name="countryCode" id="370" required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #numberfront1>
+          <select name="numberfront1" id="numberfront1"   class="form-control input-md forFieldsToChooseBCOLOR" required="" #numberfront1>
             <option data-countryCode="LT" value="370" selected>Lithuania (+370)</option>
             <optgroup label="Other countries">
               <option data-countryCode="GB" value="44">UK (+44)</option>
@@ -397,16 +403,16 @@
         </div>
         <!--Numeris-->
         <div class="col-md-2">
-          <input id="telephone1" name="telephone1" class="col-4"  class="form-control input-md" required="" type="number" #number1>
+          <input id="number1" name="number1" class="col-4"  class="form-control input-md"  type="number" required="" #number1>
         </div>
       </div>
 
       <!--Telefonas 2-->
       <!-- country codes (ISO 3166) and Dial codes. -->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="code" required="true">Telephone 2</label>
+        <label class="col-md-4 control-label" for="numberfront2" >Telephone 2</label>
         <div class="col-md-2">
-          <select name="countryCode" id="+370" required="true"  class="form-control input-md forFieldsToChooseBCOLOR" #numberfront2>
+          <select name="numberfront2" id="numberfront2" required="" class="form-control input-md forFieldsToChooseBCOLOR" #numberfront2>
             <option data-countryCode="LT" value="370" selected>Lithuania (+370)</option>
             <optgroup label="Other countries">
               <option data-countryCode="GB" value="44">UK (+44)</option>
@@ -629,7 +635,7 @@
         </div>
         <!--Numeris2-->
         <div class="col-md-2">
-          <input id="telephone2" name="telephone2" class="col-4"  class="form-control input-md"  type="number" #number2>
+          <input id="number2" name="number2" class="col-4" class=" form-control input-md"  type="number" #number2>
         </div>
       </div>
 
@@ -637,15 +643,15 @@
       <div class="form-group">
         <label class="col-md-4 control-label" >E-mail</label>
         <div class="col-md-6">
-          <input id="email" name="email"  class="form-control input-md"  type="text" #email>
+          <input id="email" name="email"  class="form-control input-md" #email>
         </div>
       </div>
 
       <!--Pajamos per menesi-->
       <div class="form-group required">
-        <label class="col-md-4 control-label" for="Loan amount"  >Monthly income after taxes</label>
+        <label class="col-md-4 control-label">Monthly income after taxes</label>
         <div class="col-md-6" >
-          <input  name="number" type="number"  class="form-control input-md" required="" #inaftertaxes>
+          <input  name="inaftertaxes" type="number"  class="form-control input-md" required=""  #inaftertaxes>
           <span class="help-block">EUR</span>
         </div>
       </div>
@@ -653,9 +659,9 @@
       <!--Button-->
       <div class="form-group" class="form-horizontal button-marging-right ">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn button2 button-size" (click)="submitinfo(loanamount.value, loanyear.value, loanday.value, loanday.value,
+          <button type="submit" class="btn button2 button-size" (click)="submitinfo(loanamount.value, loanyear.value, loanmonth.value, loanday.value,
           name.value, surname.value, personalcode.value, documenttype.value, documentnumber.value, country.value, cord.value, address.value, numberfront1.value,
-          number1.value, numberfront2.value, number2.value, email.value, inaftertaxes.value)">
+          number1.value, numberfront2.value, number2.value, email.value, inaftertaxes.value)" >
             <span class="glyphicon glyphicon-star"></span> Submit!
           </button>
         </div>
@@ -669,4 +675,4 @@
   </form>
 
 </div>
-</body>
+

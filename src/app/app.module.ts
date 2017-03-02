@@ -8,12 +8,12 @@ import {AdminLoanService} from "./admin-loan/admin-loan.service";
 import { FormComponent } from './form/form.component';
 import {LoginComponent} from "./login/login.component";
 import {InputTextModule,DataTableModule, ButtonModule, SharedModule} from 'primeng/primeng';
-import { CalculatorComponent } from './calculator/calculator.component';
 import {LoginService} from "./login/login.service";
 import {LoggedInGuard} from "./login/logged-in.guard";
 import {InformationComponent} from "./information/information.component";
 import {HomeComponent} from "./home/home.component";
 import {AdminTComponent} from "./adminT/adminT.component";
+import {AdminTService} from "./adminT/admin-t.service";
 
 
 @NgModule({
@@ -22,7 +22,6 @@ import {AdminTComponent} from "./adminT/adminT.component";
     AdminLoanComponent,
     FormComponent,
     LoginComponent,
-    CalculatorComponent,
     InformationComponent,
     HomeComponent,
     AdminTComponent
@@ -37,7 +36,7 @@ import {AdminTComponent} from "./adminT/adminT.component";
     DataTableModule,
     SharedModule
   ],
-  providers: [AdminLoanService, LoginService, LoggedInGuard],
+  providers: [AdminLoanService,LoginService,AdminTService, LoginComponent, LoggedInGuard],
   bootstrap: [
     AppComponent
   ]

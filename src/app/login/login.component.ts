@@ -16,14 +16,11 @@ export class LoginComponent {
 
   onSubmit(event, username, password) {
     event.preventDefault();
-    this.loginService.login(new Admin(username, password)).subscribe((result) => {
-      window.location.href = '/admin';
-  });
 
-
+    this.loginService.login(username, password).subscribe((result) => {
+      this.router.navigate(['/admin']);
+    });
   }
-
-
 }
 
 class Admin{

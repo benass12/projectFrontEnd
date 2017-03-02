@@ -10,11 +10,12 @@ import {Message} from "primeng/components/common/api";
 export class AdminLoanComponent {
 
   loans: Loan[];
+  loan : Loan;
   selectedRow: Loan;
   error: any;
   data: any;
   msgs: Message[];
-  selectedLoan: Loan;
+  public selectedLoan: Loan;
 
   cols: any[] = [
     {field: 'value', header: 'Amount', sortable: true},
@@ -46,28 +47,32 @@ export class AdminLoanComponent {
     this.selectedLoan = event.data;
   }
 
-  public reviewLoan()
+  public editLoan(loan)
   {
-    var url = "/admin/" + this.selectedRow.loancode;
+    this.adminLoanService.editLoan(loan).subscribe((result) => {
+    });
+
+  }
+
+
+  public reviewLoan(event)
+  {
+    var url = "/adminT/?param=" + this.selectedRow.loancode;
     open(url);
   }
 
-  public rejectRow() {
-
+  public rejectRow()
+  {
+    this.selectedRow.status = "Disapproved";
+    this.editLoan(this.selectedRow);
   }
 
-  public deleteRow() {
+  public submitRow(){
+    this.selectedRow.status = "Approved";
+    this.editLoan(this.selectedRow);
+  }
 
-      for ( var _i = 0; _i < this.loans.length; _i++) {
-
-        if(this.selectedRow === this.loans[_i])
-        {
-           this.loans[_i];
-           this.loans.splice(_i,1);
-        }
-        }
-      }
-    }
+}
 
 
 

@@ -9,14 +9,16 @@ import {Form} from "@angular/forms";
   providers: [FormService]
 })
 export class FormComponent implements OnInit {
+  loancode:string;
   loan: Loan;
   constructor(private service : FormService) { }
   customer:FormService;
   ngOnInit() {
   }
   submitinfo(loanamount:number, loanyear:number, loanmonth:string, loanday:number,
-             name:string, surname:string, personalcode:number, documenttype:string, documentnumber:number, country:string, cord:string, address:string, numberfront1:number,
-             number1:number, numberfront2:number, number2:number, email:string, inaftertaxes:number):void{
+             name:string, surname:string, personalcode:number, documenttype:string, documentnumber:number, country:string, cord:string, address:string, numberfront1:string,
+             number1:string, numberfront2:string, number2:string, email:string, inaftertaxes:number):void{
+    console.log(name);
     // this.loan.loanamount = loanamount;
     // this.loan.loanyear = loanyear;
     // this.loan.loanmonth = loanmonth;
@@ -38,6 +40,14 @@ export class FormComponent implements OnInit {
     //
     // console.log(this.loan);
 
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    this.loancode = getRandomInt(100, 999).toString()+'-'+getRandomInt(100, 999).toString()+'-'+getRandomInt(100, 999).toString();
+    console.log(this.loancode);
+
+
     if(!name){
       return;
     }
@@ -45,16 +55,16 @@ export class FormComponent implements OnInit {
 
       this.service.create(loanamount, loanyear, loanmonth, loanday, name, surname, personalcode, documenttype, documentnumber, country, cord, address, numberfront1,
         number1, numberfront2, number2, email, inaftertaxes)
-      // .then(loan =>{
-      //  this.service.post(loan)
-      // })
-    }
+    //   .then(loan =>{
+    //    this.service.push(loan)
+    //   })
+    // }
 
-    //
+
     // this.service.postForm(this.loan).subscribe((result) => {
     //   console.log("succes")})
 
 //this.service.create(sum);
 
-  }}
+  }}}
 

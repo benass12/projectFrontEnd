@@ -1,6 +1,6 @@
 <h1 class="row"> Loans</h1>
 
-<p-dataTable [rows]="10" [paginator]="true" [pageLinks]="5" selectionMode="single" exportFilename="loans"
+<p-dataTable [rows]="10" [paginator]="true" [pageLinks]="5" selectionMode="single" exportFilename="loans" (onRowClick)="onRowSelect($event)"
              [rowsPerPageOptions]="[5,10,20]" [value]="loans" [(selection)]="selectedRow" [editable]="true" [globalFilter]="gb" #dt>
 
   <p-header>
@@ -19,16 +19,13 @@
 </p-dataTable>
 
 <div class="col-sm-offset-4 col-sm-16 center-btn btn-group-lg">
-  <button type="button" class=" btn btn-primary" (click)="submitRow($event)" >
+  <button type="button" class=" btn btn-primary" (click)="submitRow()" >
     Submit
   </button>
-  <button type="button" class=" btn btn-primary" (click)="rejectRow($event)">
+  <button type="button" class=" btn btn-primary" (click)="rejectRow()">
     Reject
   </button>
-  <button type="button" class=" btn btn-primary" (click)="deleteRow($event)">
-    Delete
-  </button>
-  <button type="button" class=" btn btn-primary" (click)="reviewLoan($event)">
+  <button type="button" class=" btn btn-primary" (click)="reviewLoan()">
     Review
   </button>
 </div >

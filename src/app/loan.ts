@@ -4,23 +4,25 @@
 
 class Loan {
   constructor(){}
-  loanamount : any;
+  value : any;
   loanyear : number;
   loanmonth : string;
   loanday : number;
   name: string;
   surname : string;
-  personalcode: number;
+  personalid: number;
   documenttype: string;
-  documentnumber: number;
+  docnumber: number;
   country: string;
   cord: string;
+  city: string;
   address: string;
   numberfront1: number;
-  number1  : number;
+  phone1  : number;
   numberfront2: number;
-  number2: number;
+  phone2: number;
   email: string;
-  inaftertaxes: number;
+  salarywithtaxes: number;
   loancode: string;
+  status: string;
   }

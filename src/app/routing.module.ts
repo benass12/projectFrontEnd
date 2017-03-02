@@ -4,7 +4,6 @@ import {AppComponent} from "./app.component";
 import {AdminLoanComponent} from "./admin-loan/admin-loan.component";
 import {FormComponent} from "./form/form.component";
 import {LoginComponent} from "./login/login.component";
-import {CalculatorComponent} from "./calculator/calculator.component";
 import {LoggedInGuard} from "./login/logged-in.guard";
 import {InformationComponent} from "./information/information.component";
 import {AdminTComponent} from "./adminT/adminT.component";
@@ -14,7 +13,7 @@ import {HomeComponent} from "./home/home.component";
 const appRoutes: Routes = [
   {
     path: '',
-    component: AdminLoanComponent
+    component: AppComponent
   },
   {
     path: 'admin',
@@ -30,10 +29,6 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'calculator',
-    component: CalculatorComponent
-  },
-  {
     path: 'information',
     component: InformationComponent
   },
@@ -42,10 +37,10 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'adminT',
-    component: AdminTComponent,
-    canActivate: [LoggedInGuard]
+    path: 'adminT/:param',
+    component: AdminTComponent
   }
+
 ];
 
 @NgModule({

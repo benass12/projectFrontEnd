@@ -9,52 +9,71 @@ export class FormService {
   constructor(private http:Http) { }
 
   create(
-    loanamount:number, loanyear:number, loanmonth:string, loanday:number, name:string, surname:string, personalcode:number, documenttype:string, documentnumber:number, country:string,cord:string, address:string, numberfront1:number,
-    number1:number, numberfront2:number, number2:number, email:string, inaftertaxes:number
+    loanamount:number, loanyear:number, loanmonth:string, loanday:number, name:string, surname:string, personalcode:number, documenttype:string, documentnumber:number, country:string, cord:string, address:string, numberfront1:string,
+    number1:string, numberfront2:string, number2:string, email:string, inaftertaxes:number
   ): Promise<any>{
     console.log("cj suveike");
-
+    console.log(loanamount);
+    console.log(loanyear);
     console.log(loanmonth);
+    console.log(loanday);
+    console.log(name);
+    console.log(surname);
+    console.log(personalcode);
+    console.log(documenttype);
+    console.log(documentnumber);
+    console.log(country);
+    console.log(cord);
+    console.log(address);
+    console.log(numberfront1);
+    console.log(number1);
+    console.log(numberfront2);
+    console.log(number2);
+    console.log(email);
+    console.log(inaftertaxes);
+
+    // let headers = new Headers();
+    // headers.append('Content-Type', 'application/json');
+    // headers.append('RequestMethod', 'POST');
     return this.http
       .post("https://frozen-hamlet-97469.herokuapp.com/loans/all",JSON.stringify ({
-        value: loanamount,
-        personalid: personalcode,
-        docnumber: documentnumber,
-        doctype: Number(documenttype),//netinka int string
-        name: name,
-        surname: surname,
-        paymentday: loanday,
-        termdate : String(loanyear) + "-" + String(loanmonth),
-        country: country,
-        city: cord,
-        address: address,
-        salarywithtaxes: inaftertaxes,
-        email : email,
-        phone1: String(numberfront1) + String(number1),
-        phone2: String(numberfront2) + String(number2)
+        "value": loanamount,
+        "personalid": personalcode,
+        "docnumber": documentnumber,
+        "doctype": documenttype,//Number(documenttype),//netinka int string
+        "name": name,
+        "surname": surname,
+        "paymentday": loanday,
+        "termdate" : "adsda",
+        "country": country,
+        "city": cord,
+        "address": address,
+        "salarywithtaxes": inaftertaxes,
+        "email" : email,
+        "phone1": "123 ",
+        "phone2": "213"
 
-        // "income": 1500,
-        // "spouse_id": true,
-        // "spouse_name": "Monikute",
-        // "spouse_surname": "Monce",
-        // "spouse_personal_code": 48902034125
-        // surname: surname,
-        // personal_code: personal_code,
-        // doc_type: doc_type,
-        // doc_code: doc_code,
-        // country: country,
-        // city: city,
-        // address: address,
-        // phone_number: phone_number,
-        // email: email,
-        // salary: salary,
-        // amount: amount,
-        // term: term,
-        // payment_day: payment_day
+        // value: 1115,
+        // personalid: "",
+        // docnumber: 2,
+        // doctype: "1",//Number(documenttype),//netinka int string
+        // name: "mikas ",
+        // surname: "kada",
+        // paymentday: "",
+        // termdate : "",
+        // country: "Lietuva",
+        // city: "",
+        // address: "Kentukio 30",
+        // salarywithtaxes: "",
+        // email : "Antanavicius@gmail.com",
+        // phone1: "",
+        // phone2: ""
+
+
       }), {headers: this.headers})
       .toPromise()
       .then(
-        res => res.json().data
+        //
       )
       .catch(this.handleError);
 
