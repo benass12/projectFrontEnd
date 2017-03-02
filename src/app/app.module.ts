@@ -14,6 +14,8 @@ import {InformationComponent} from "./information/information.component";
 import {HomeComponent} from "./home/home.component";
 import {AdminTComponent} from "./adminT/adminT.component";
 import {AdminTService} from "./adminT/admin-t.service";
+import {FormsModule} from "@angular/forms";
+import {CalculatorComponent} from "./calculator/calculator.component";
 
 
 @NgModule({
@@ -24,8 +26,8 @@ import {AdminTService} from "./adminT/admin-t.service";
     LoginComponent,
     InformationComponent,
     HomeComponent,
-    AdminTComponent
-
+    AdminTComponent,
+    CalculatorComponent
   ],
   imports: [
     RoutingModule,
@@ -34,7 +36,8 @@ import {AdminTService} from "./adminT/admin-t.service";
     BrowserModule,
     InputTextModule,
     DataTableModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [AdminLoanService,LoginService,AdminTService, LoginComponent, LoggedInGuard],
   bootstrap: [

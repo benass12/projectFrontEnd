@@ -13,24 +13,25 @@ export class LoginComponent {
   constructor(private loginService: LoginService, private router: Router) {
   }
 
+  admin : Admin = new Admin();
 
-  onSubmit(event, username, password) {
+  onSubmit(event, username : string, password : string) {
+
     event.preventDefault();
 
-    this.loginService.login(username, password).subscribe((result) => {
-      this.router.navigate(['/admin']);
+    this.admin.username = username;
+    this.admin.password = password;
+    this.loginService.login(this.admin).subscribe((result) => {
+      this.router.navigate['/admin'];
     });
   }
+
+
 }
 
 class Admin{
 
-  constructor(username, password)
-  {
-    this.username = username;
-    this.password = password;
-  }
-
+  constructor() {}
   username: string;
   password: string;
   token: string;

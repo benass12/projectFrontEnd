@@ -12,25 +12,24 @@ export class LoginService {
     this.loggedIn = !!localStorage.getItem('auth_token');
   }
 
-  login(username, password) {
+  login(details) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    //headers.append('RequestMethod', 'POST');
+    headers.append('RequestMethod', 'POST');
 
     return this.http
       .post(
         'https://frozen-hamlet-97469.herokuapp.com/login',
-        JSON.stringify(username, password),
+        JSON.stringify(details),
         { headers }
       )
-.map(res => res.json())
-.map((res) => {
-  if (res.success) {
-          localStorage.setItem('auth_token', res.token);
-          this.loggedIn = true;
-        }
+      .map(res => res.json())
+      .map(res => {
+        localStorage.setItem('auth_token', res.token);
+        this.loggedIn = true;
         return res.success;
-      });
+      })
+
   }
 
   logout() {

@@ -8,6 +8,7 @@ import {LoggedInGuard} from "./login/logged-in.guard";
 import {InformationComponent} from "./information/information.component";
 import {AdminTComponent} from "./adminT/adminT.component";
 import {HomeComponent} from "./home/home.component";
+import {CalculatorComponent} from "./calculator/calculator.component";
 
 
 const appRoutes: Routes = [
@@ -39,6 +40,10 @@ const appRoutes: Routes = [
   {
     path: 'adminT/:param',
     component: AdminTComponent
+  },
+  {
+    path: 'calculator',
+    component: CalculatorComponent
   }
 
 ];

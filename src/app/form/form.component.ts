@@ -4,8 +4,8 @@ import {Form} from "@angular/forms";
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  templateUrl: 'form.component.html',
+  styleUrls: ['form.component.css'],
   providers: [FormService]
 })
 export class FormComponent implements OnInit {
@@ -47,8 +47,10 @@ export class FormComponent implements OnInit {
     this.loancode = getRandomInt(100, 999).toString()+'-'+getRandomInt(100, 999).toString()+'-'+getRandomInt(100, 999).toString();
     console.log(this.loancode);
 
-
-    if(!name){
+    if(loanamount > 30000){
+      return;
+    }
+    else if(!name){
       return;
     }
     else {

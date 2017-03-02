@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<body>
+
+<header>
+  <div class="row">
+    <h3>CONSUMER LOAN CALCULATOR</h3>
+    <br>
+  </div>
+</header>
+<body>
+<div class="container border">
+  <div class="row">
+
+    <h4>Info about your loan </h4>
+
+  </div>
+  <div class="row ">
+    <div class="col-sm-4 text-right">
+      Period of loan (years)
+    </div>
+    <div class="col-sm-4 text-right">
+      <input class="form-control" type="number" id="loanPeriodYears" #loanPeriodYears required value="1" min="1" max="60">
+    </div>
+    <div class="col-sm-4 text-right">
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-4 text-right">
+      Loan amount
+    </div>
+    <div class="col-sm-4">
+      <input type="range" style="background-size: contain" id="loanValue" name="loanValue" [(ngModel)]="loanValue" value="300" min="300" max="30000">
+    </div>
+    <div class="col-sm-4 text-justify">
+      <input type="number" value="300" min="300" max="999999999" [(ngModel)]="loanValue"> Eur
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 text-right">I will take a consumer loan</div>
+    <div class="col-sm-2">
+      <input type="radio" name="optradio" checked="checked" (click)="changeMarriedStateToAlone()"> Alone
+    </div>
+    <input type="radio" name="optradio" (click)="changeMarriedStateToMarried()"> With my partner/co-debtor
+  </div>
+  <hr/>
+  <div class="row">
+    <h4>Info about your monthly income </h4>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 text-right">
+      General monthly income
+    </div>
+    <div class="col-sm-4">
+      <input type="range" style="background-size: contain" id="incomeValue" name="incomeValue" [(ngModel)]="incomeValue" min="245" max="5000">
+    </div>
+    <div class="col-sm-4 text-justify">
+      <input type="text" [(ngModel)]="incomeValue"> Eur
+    </div>
+  </div>
+  <div *ngIf="!ifalone" class="row">
+    <div class="col-sm-4 text-right">
+      Your partner's/co-debtor's monthly income
+    </div>
+    <div class="col-sm-4">
+      <input type="range" style="background-size: contain" id="deptorsValue" name="deptorsValue" [(ngModel)]="deptorsValue" min="245" max="5000">
+    </div>
+    <div class="col-sm-4 text-justify">
+      <input type="text" [(ngModel)]="deptorsValue"> Eur
+    </div>
+  </div>
+
+  <div class="col-sm-12 text-right">
+    <button type="button" class="btn button2 button-size forbuttons" (click)="showValue(loanValue, loanPeriodYears.value)">Calculate</button>
+  </div>
+
+  <div class="row">
+  </div>
+</div>
+</body>
+<hr/>
+<div *ngIf="isPressed" class="error" >
+  <header>
+    <div class="container">
+      <h3>Calculated payment for loan (monthly)</h3></div>
+  </header>
+  <div class="container">
+    <table class="table table-striped" >
+      <thead class="thead-inverse">
+      <tr>
+        <th></th>
+        <th>Remaining loan amount</th>
+        <th>Monthly payment</th>
+        <th>Monthly interest payment</th>
+        <th>Contract fee</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td></td>
+        <td>{{loanAmount|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{loanValue * 0.15|currency:'EUR':true:'1.2-2'}}</td>
+        <td>€0.00</td>
+        <td>{{loanAmount * 0.015|currency:'EUR':true:'1.2-2'}}</td>
+      </tr>
+      <tr *ngFor="let payment of list"
+          [class.selected]="payment === selectedPayment">
+        <td>{{payment.monthNumber}}</td>
+        <td>{{payment.remainingAmount|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{payment.monthlyPay|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{payment.monthlyInt|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{payment.contractFee|currency:'EUR':true:'1.2-2'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+</body>
