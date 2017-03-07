@@ -1,48 +1,31 @@
+<h1 class="row"> Loans</h1>
 
-<h1 class="swedfont"> Vartojimo paskola</h1>
-<table class="table table-striped basicfont admin-table">
-  <thead class="swedbackground">
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <th>Suma</th>
-    <th>Vartotojas</th>
-    <th>Statusas</th>
-    <th>Data</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>500</td>
-    <td>Vilius Žukauskas</td>
-    <td>Patvirtinta</td>
-    <td>2016-06-18</td>
+<p-dataTable [rows]="10" [paginator]="true" [pageLinks]="5" selectionMode="single" exportFilename="loans" (onRowClick)="onRowSelect($event)"
+             [rowsPerPageOptions]="[5,10,20]" [value]="loans" [(selection)]="selectedRow" [editable]="true" [globalFilter]="gb" #dt>
 
-  </tr>
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>1500 </td>
-    <td>Mykolas Banevicius</td>
-    <td>Atmesta</td>
-    <td>2017-02-22</td>
-  </tr>
-  <tr>
-    <th><input type="checkbox" class="custom-checkbox"></th>
-    <td>10000 </td>
-    <td>Tadas Adomaitis</td>
-    <td>Nepatikrinta</td>
-    <td>2017-01-16</td>
-  </tr>
-  </tbody>
-</table>
-<button type="button" class="btn btn-primary buttonleft button">
-  Patvirtinti
-</button>
-<button type="button" class="btn btn-primary button buttonmid">
-  Atmesti
-</button>
-<button type="button" class="btn btn-primary buttonright button">
-  Ištrinti
-</button>
+  <p-header>
+    <div class="ui-widget-header ui-fluid" style="padding:4px 10px;border-bottom: 0 none">
+      <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+      <input #gb type="text" pInputText size="50" placeholder="Global Filter">
+    </div>
 
+  </p-header>
 
+  <p-column field="value" header="Amount"  sortable="true" ></p-column>
+  <p-column field="name" header="Name" sortable="true" ></p-column>
+  <p-column field="status" header="Status" sortable="true" ></p-column>
+  <p-column field="date" header="Date" sortable="true"></p-column>
+
+</p-dataTable>
+
+<div class="col-sm-offset-4 col-sm-16 center-btn btn-group-lg">
+  <button type="button" class=" btn btn-primary" (click)="submitRow()" >
+    Submit
+  </button>
+  <button type="button" class=" btn btn-primary" (click)="rejectRow()">
+    Reject
+  </button>
+  <button type="button" class=" btn btn-primary" (click)="reviewLoan()">
+    Review
+  </button>
+</div >

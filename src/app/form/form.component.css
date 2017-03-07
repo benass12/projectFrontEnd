@@ -1,0 +1,64 @@
+.plotis{
+
+  padding-left: 1000px;
+}
+.col-4{
+  padding-left: 100px;
+  margin-right: 80%;
+}
+.your-class input{
+  float:left;
+}
+body {
+  background-color: #eee;
+}
+
+*[role="form"] {
+  max-width: 530px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+  margin-left: 5em;
+  margin-bottom: 1em;
+}
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+.bold{
+  font-weight: bold;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.button2 {
+  background-color: Darkorange;
+}
+.forFieldsToChooseBCOLOR{
+  background-color: PaleGoldenRod  ;
+}
+.button-marging-right{
+  margin-left:38%;
+}
+.logo-marging-right{
+  margin-left:45%;
+}
+.a-marging-right{
+  margin-left:60%;
+  color:Red;
+}
+.logo{
+  border-image: url('../assets/image/fb_share_img.png');
+}
+.button-size{
+  height:50px;
+  width:100px;
+}

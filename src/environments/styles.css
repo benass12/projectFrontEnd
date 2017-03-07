@@ -1,0 +1,462 @@
+@import url('../node_modules/primeng/resources/themes/bootstrap/theme.css');
+@import url('../node_modules/primeng/resources/primeng.min.css');
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+
+
+body .ui-state-active,
+body .ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body a {
+  color: darkorange;
+  text-decoration: none;
+}
+body a:hover {
+  color: darkorange;
+}
+body .ui-button {
+  color: #ffffff;
+  background-color: darkorange;
+}
+body .ui-button:enabled:hover {
+  outline: 0 none;
+  background-color: darkorange;
+}
+body .ui-togglebutton:not(.ui-state-disabled):not(.ui-state-active):hover {
+  background-color: darkorange;
+}
+
+body .ui-chkbox .ui-chkbox-box.ui-state-active {
+  border: 1px solid darkorange;
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-chkbox .ui-chkbox-box.ui-state-focus {
+  border: 1px solid darkorange;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+  border: 1px solid darkorange;
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-active .ui-radiobutton-icon.fa-circle {
+  color: #ffffff;
+}
+body .ui-radiobutton .ui-radiobutton-box.ui-state-focus {
+  border: 1px solid darkorange;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+body .ui-radiobutton .ui-radiobutton-box .ui-radiobutton-icon {
+  font-size: 0.5em;
+  overflow: hidden;
+  position: relative;
+  top: -0.15em;
+}
+body .ui-inputswitch {
+  background-color: darkorange;
+  text-transform: uppercase;
+}
+
+body .ui-selectbutton.ui-buttonset .ui-button.ui-state-active {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-autocomplete.ui-autocomplete-multiple .ui-autocomplete-multiple-container {
+  padding: 0.5em 0.75em;
+}
+body .ui-autocomplete.ui-autocomplete-multiple .ui-autocomplete-multiple-container .ui-autocomplete-input-token input:focus {
+  border: none;
+}
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-multiselect .ui-multiselect-item.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-listbox .ui-listbox-item.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-multiselectlistbox .ui-multiselectlistbox-item.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-rating .ui-rating-cancel {
+  display: inline-block;
+}
+body .ui-rating .ui-rating-star a:before {
+  content: "";
+}
+body .ui-rating .ui-rating-star a:hover {
+  color: darkorange;
+}
+body .ui-rating .ui-rating-star-on a {
+  color: darkorange;
+  background: none !important;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-indent: 0px !important;
+  text-align: center;
+  display: block;
+}
+body .ui-rating .ui-rating-star-on a:before {
+  content: "";
+}
+body .ui-spinner .ui-spinner-button {
+  z-index: auto;
+  box-sizing: border-box;
+}
+body .ui-spinner:not(.ui-state-disabled) .ui-spinner-button:hover {
+  background-color: darkorange;
+  color: #ffffff;
+}
+
+body .ui-slider .ui-slider-handle {
+  background-color: darkorange;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+body .ui-slider .ui-slider-handle:hover {
+  background-color: darkorange;
+}
+body .ui-slider .ui-slider-range {
+  background: darkorange;
+}
+
+body .ui-buttonset .ui-button:active {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-buttonset .ui-button:active:focus {
+  background-color: darkorange;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+body .ui-splitbutton.ui-buttonset .ui-button {
+  color: #ffffff;
+  background-color: darkorange;
+  border: 1px solid transparent;
+}
+
+body .ui-splitbutton.ui-buttonset .ui-button.ui-splitbutton-menubutton .fa {
+  margin-left: -.65em;
+}
+body .ui-splitbutton.ui-buttonset .ui-button:hover {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-splitbutton.ui-buttonset .ui-button.ui-state-focus {
+  background-color: darkorange;
+  color: #ffffff;
+}
+
+body .ui-datepicker table td a.ui-state-active {
+  color: #ffffff;
+  background-color: darkorange;
+}
+body .ui-notificationbar {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-accordion .ui-accordion-header {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  color: darkorange;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  margin-top: 0.625em;
+}
+
+body .ui-accordion .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled):hover .ui-icon {
+  color: #2d353c;
+}
+body .ui-accordion .ui-accordion-header.ui-state-active {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-accordion .ui-accordion-header.ui-state-active a {
+  color: #ffffff;
+}
+body .ui-accordion .ui-accordion-header.ui-tabview-outline {
+  border: 0 none;
+  outline: 0 none;
+  background-color: #e6e6e6;
+}
+body .ui-accordion .ui-accordion-header.ui-tabview-outline.ui-state-active {
+  background-color: darkorange;
+}
+
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active.ui-tabview-outline,
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active.ui-tabview-outline,
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active.ui-tabview-outline,
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active.ui-tabview-outline {
+  background-color: darkorange;
+}
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active,
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active {
+  border-color: darkorange;
+  border-bottom: none;
+}
+body .ui-paginator .ui-paginator-first,
+body .ui-paginator .ui-paginator-prev,
+body .ui-paginator .ui-paginator-next,
+body .ui-paginator .ui-paginator-last {
+  color: darkorange;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  min-height: 0.875em;
+  min-width: 2em;
+  padding: 0.5em 0.5em;
+  vertical-align: top;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page {
+  padding: 0.5em 0.625em;
+  min-width: 2em;
+  color: darkorange;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 0;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+  color: #ffffff;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page:hover {
+  background-color: #f4f3f4;
+}
+body .ui-paginator .ui-paginator-pages .ui-paginator-page:hover.ui-state-active {
+  background-color: darkorange;
+}
+body .ui-datatable thead th.ui-state-active {
+  background-color: darkorange;
+  border-color: darkorange;
+  color: #ffffff;
+}
+body .ui-datatable thead th:focus.ui-state-active {
+  background-color: darkorange;
+}
+body .ui-datatable .ui-datatable-data tr.ui-datatable-even.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+  border-color: darkorange;
+}
+body .ui-datatable .ui-datatable-data tr.ui-state-highlight {
+  border-color: darkorange;
+}
+body .ui-datatable .ui-datatable-data tr.ui-row-editing.ui-datatable-odd,
+body .ui-datatable .ui-datatable-data tr.ui-row-editing.ui-datatable-even {
+  border-color: #c7c7c7;
+  border-bottom-color: darkorange;
+}
+body .ui-datatable .ui-datatable-data > tr > td {
+  padding: .75em;
+}
+body .ui-datatable .ui-datatable-data tr td.ui-editable-column input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0 none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+body .ui-picklist .ui-picklist-list .ui-picklist-item.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-orderlist .ui-orderlist-list .ui-orderlist-item.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+
+body .ui-carousel .ui-carousel-page-links .ui-carousel-page-link.ui-icon-radio-on {
+  color: darkorange;
+  background-color: #767b7f;
+}
+body .ui-treetable thead th.ui-state-active {
+  border-color: darkorange;
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-treetable .ui-treetable-data tr.ui-state-highlight {
+  border-color: darkorange;
+}
+body .ui-treetable .ui-treetable-data tr td .ui-chkbox .ui-chkbox-icon {
+  color: darkorange;
+  left: 0px;
+}
+body .ui-treetable .ui-treetable-scrollable-header,
+body .ui-treetable .ui-treetable-scrollable-footer {
+  background-color: #f0f3f5;
+}
+body .ui-treetable .ui-treetable-scrollable-header .ui-treetable-scrollable-header-box td,
+body .ui-tree .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-tree .ui-tree-droppoint:hover {
+  background-color: darkorange;
+}
+body .ui-tree.ui-tree-horizontal .ui-treenode-content.ui-state-highlight {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-tree.ui-tree-horizontal .ui-treenode-content.ui-state-highlight .ui-tree-toggler,
+body .ui-tree.ui-tree-horizontal .ui-treenode-content.ui-state-highlight .ui-treenode-icon {
+  color: #ffffff;
+}
+body .ui-tree.ui-tree-horizontal .ui-treenode-content .ui-chkbox .ui-icon {
+  color: darkorange;
+}
+body .ui-tree-draghelper {
+  border: 1px solid darkorange;
+}
+body .ui-overlaypanel .ui-overlaypanel-close:hover {
+  color: darkorange;
+}
+body .ui-overlaypanel .ui-overlaypanel-close span {
+  margin-left: 0.063em;
+}
+body .ui-lightbox .ui-lightbox-caption .ui-lightbox-close:hover {
+  color: darkorange;
+}
+body .ui-lightbox .ui-lightbox-content-wrapper {
+  overflow: hidden;
+}
+body .ui-breadcrumb ul li .ui-menuitem-link {
+  color: darkorange;
+  margin: 0;
+  position: relative;
+  top: 0;
+}
+body .ui-steps .ui-steps-item.ui-state-highlight .ui-steps-number {
+  background-color: darkorange;
+  color: #ffffff;
+  border-color: darkorange;
+}
+body .ui-steps:before {
+  content: ' ';
+  border: 1px solid darkorange;
+  width: 100%;
+  top: 45%;
+  left: 0;
+  display: block;
+  position: absolute;
+}
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link:hover,
+body .ui-menu .ui-menu-list .ui-menuitem.ui-menuitem-active > .ui-menuitem-link {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-menu .ui-menu-list .ui-menu-child {
+  padding: 0;
+}
+body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-active .ui-menuitem-link {
+  background-color: darkorange;
+  color: #ffffff;
+}
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active {
+  background-color: darkorange;
+}
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active a {
+  color: #ffffff;
+}
+body .ui-panelmenu .ui-panelmenu-header.ui-state-active .fa {
+  color: #ffffff;
+}
+body .ui-progressbar .ui-progressbar-value {
+  border: 0 none;
+  background: darkorange;
+  margin: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.colorForNav{
+  background-color: DarkOrange  ;
+}
+.color1{
+  color: Black  ;
+}
+.navbar-default.navbar-inverse .navbar-nav > li > a {
+  color: Black;
+}
+
+#informationButton{
+  color:black;
+
+}
+#informationButton:hover{
+  color:white;
+}
+#formButton{
+  color:black;
+
+}
+#formButton:hover{
+  color:white;
+}
+#homeButton{
+  color:black;
+
+}
+#homeButton:hover{
+  color:white;
+}
+#adminButton{
+  color:black;
+
+}
+#adminButton:hover{
+  color:white;
+}
+#calculatorButton{
+  color:black;
+
+}
+#calculatorButton:hover{
+  color:white;
+}
+#loginButton{
+  color:black;
+}
+#loginButton:hover{
+  color:white;
+}
+#logoutButton{
+  color:black;
+}
+#logoutButton:hover{
+  color:white;
+}
+.logo-marging-up{
+  margin-top:100%;
+}
+

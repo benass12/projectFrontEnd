@@ -9,6 +9,8 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var app_component_1 = require("./app.component");
 var admin_loan_menu_component_1 = require("./admin-loan-menu/admin-loan-menu.component");
+var form_component_1 = require("./form/form.component");
+var calculator_component_1 = require("./calculator/calculator.component");
 var appRoutes = [
     {
         path: '',
@@ -19,6 +21,11 @@ var appRoutes = [
         path: 'admin',
         component: admin_loan_menu_component_1.AdminLoanMenuComponent,
         data: { title: 'Loan list' }
+    },
+    {
+      path: 'form',
+      component: form_component_1.FormComponent,
+      data: { title: 'Form' }
     }
 ];
 var RoutingModule = (function () {
