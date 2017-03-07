@@ -2,8 +2,6 @@
 @import url('../node_modules/primeng/resources/primeng.min.css');
 @import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 @import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
-
-
 body .ui-state-active,
 body .ui-state-highlight {
   background-color: darkorange;
@@ -27,7 +25,6 @@ body .ui-button:enabled:hover {
 body .ui-togglebutton:not(.ui-state-disabled):not(.ui-state-active):hover {
   background-color: darkorange;
 }
-
 body .ui-chkbox .ui-chkbox-box.ui-state-active {
   border: 1px solid darkorange;
   background-color: darkorange;
@@ -63,7 +60,6 @@ body .ui-inputswitch {
   background-color: darkorange;
   text-transform: uppercase;
 }
-
 body .ui-selectbutton.ui-buttonset .ui-button.ui-state-active {
   background-color: darkorange;
   color: #ffffff;
@@ -123,7 +119,6 @@ body .ui-spinner:not(.ui-state-disabled) .ui-spinner-button:hover {
   background-color: darkorange;
   color: #ffffff;
 }
-
 body .ui-slider .ui-slider-handle {
   background-color: darkorange;
   -moz-transition: background-color 0.3s;
@@ -134,14 +129,12 @@ body .ui-slider .ui-slider-handle {
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-
 body .ui-slider .ui-slider-handle:hover {
   background-color: darkorange;
 }
 body .ui-slider .ui-slider-range {
   background: darkorange;
 }
-
 body .ui-buttonset .ui-button:active {
   background-color: darkorange;
   color: #ffffff;
@@ -153,13 +146,11 @@ body .ui-buttonset .ui-button:active:focus {
   -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 }
-
 body .ui-splitbutton.ui-buttonset .ui-button {
   color: #ffffff;
   background-color: darkorange;
   border: 1px solid transparent;
 }
-
 body .ui-splitbutton.ui-buttonset .ui-button.ui-splitbutton-menubutton .fa {
   margin-left: -.65em;
 }
@@ -171,7 +162,6 @@ body .ui-splitbutton.ui-buttonset .ui-button.ui-state-focus {
   background-color: darkorange;
   color: #ffffff;
 }
-
 body .ui-datepicker table td a.ui-state-active {
   color: #ffffff;
   background-color: darkorange;
@@ -190,7 +180,6 @@ body .ui-accordion .ui-accordion-header {
   transition: background-color 0.3s;
   margin-top: 0.625em;
 }
-
 body .ui-accordion .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled):hover .ui-icon {
   color: #2d353c;
 }
@@ -209,7 +198,6 @@ body .ui-accordion .ui-accordion-header.ui-tabview-outline {
 body .ui-accordion .ui-accordion-header.ui-tabview-outline.ui-state-active {
   background-color: darkorange;
 }
-
 body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active.ui-tabview-outline,
 body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active.ui-tabview-outline,
 body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active.ui-tabview-outline,
@@ -286,7 +274,6 @@ body .ui-datatable .ui-datatable-data tr td.ui-editable-column input {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-
 body .ui-picklist .ui-picklist-list .ui-picklist-item.ui-state-highlight {
   background-color: darkorange;
   color: #ffffff;
@@ -295,7 +282,6 @@ body .ui-orderlist .ui-orderlist-list .ui-orderlist-item.ui-state-highlight {
   background-color: darkorange;
   color: #ffffff;
 }
-
 body .ui-carousel .ui-carousel-page-links .ui-carousel-page-link.ui-icon-radio-on {
   color: darkorange;
   background-color: #767b7f;
@@ -399,4 +385,57 @@ body .ui-progressbar .ui-progressbar-value {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-
+.colorForNav{
+  background-color: DarkOrange  ;
+}
+.color1{
+  color: Black  ;
+}
+.navbar-default.navbar-inverse .navbar-nav > li > a {
+  color: Black;
+}
+#informationButton{
+  color:black;
+}
+#informationButton:hover{
+  color:white;
+}
+#formButton{
+  color:black;
+}
+#formButton:hover{
+  color:white;
+}
+#homeButton{
+  color:black;
+}
+#homeButton:hover{
+  color:white;
+}
+#adminButton{
+  color:black;
+}
+#adminButton:hover{
+  color:white;
+}
+#calculatorButton{
+  color:black;
+}
+#calculatorButton:hover{
+  color:white;
+}
+#loginButton{
+  color:black;
+}
+#loginButton:hover{
+  color:white;
+}
+#logoutButton{
+  color:black;
+}
+#logoutButton:hover{
+  color:white;
+}
+.logo-marging-up{
+  margin-top:100%;
+}

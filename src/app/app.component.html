@@ -1,5 +1,22 @@
 <div class="container">
+  <nav class="navbar navbar-inverse colo1">
+    <div class="container-fluid colorForNav">
+      <div class="navbar-header">
+        <a class="navbar-brand " style="color: black; "    href="information">Consumer Loan</a>
+      </div >
+      <ul class="nav navbar-nav">
+        <li ><a href="/information" id="informationButton" >Information</a></li>
+        <li><a href="/calculator" id="calculatorButton">Calculator</a></li>
+        <li><a href="/form" id="formButton">Form</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login" id="loginButton">Login</a></li>
+        <li><a  id="logoutButton" href="information" (click)="onLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
   <router-outlet></router-outlet>
+
   <!--<div><li><a routerLink="/admin">To admin page</a></li></div>-->
 </div>
 

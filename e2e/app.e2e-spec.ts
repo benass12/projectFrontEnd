@@ -9,6 +9,6 @@ describe('front-e App', function() {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Interest and fees');
   });
 });

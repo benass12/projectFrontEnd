@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map'
+import {Router} from "@angular/router";
 
 @Injectable()
 export class LoginService {
@@ -8,7 +9,7 @@ export class LoginService {
   private loggedIn = false;
   private loan :Loan;
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private router: Router) {
     this.loggedIn = !!localStorage.getItem('auth_token');
   }
 
@@ -25,8 +26,15 @@ export class LoginService {
       )
       .map(res => res.json())
       .map(res => {
-        localStorage.setItem('auth_token', res.token);
-        this.loggedIn = true;
+        if(res.token != null)
+        {
+          localStorage.setItem('auth_token', res.token);
+          this.loggedIn = true;
+          this.router.navigate(['./admin']);
+        }
+        else {
+          alert("Invalid username or password");
+        }
         return res.success;
       })
 

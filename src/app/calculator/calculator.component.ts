@@ -3,7 +3,7 @@ import { Payment } from './payment';
 @Component({
   selector: 'app-calculator',
   templateUrl: 'calculator.component.html',
-  styleUrls: ['calculator.component.css']
+  styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
   isPressed: boolean = false;
@@ -19,6 +19,7 @@ export class CalculatorComponent implements OnInit {
   ngOnInit() {
     console.log('onInit');
   }
+
   showValue(loanValue: number, loanPeriodYears:number) {
     this.period = loanPeriodYears*12;
     this.isPressed=true;
@@ -28,30 +29,60 @@ export class CalculatorComponent implements OnInit {
     let monthlyPayment = 0;
     let monthlyInterest = 0;
     let leftValue = this.loanValue - this.loanValue * 0.15;
-    monthlyPayment = this.calculateMonthlyPayment(leftValue, this.period);
-    for (let i: number = 1; i <= this.period; i++)
-    {
-      monthlyInterest = this.calculateMonthlyInterest(leftValue);
-      this.list.push(new Payment(i, leftValue, monthlyPayment + 0.70, monthlyInterest, 0.70));
-      leftValue = leftValue - (monthlyPayment - monthlyInterest);
+    monthlyPayment = this.calculateMonthlyPayment(leftValue);
+
+    if(this.ifalone == true){
+      if(monthlyPayment<this.incomeValue){
+        for (let i: number = 1; i <= this.period; i++)
+        {
+          monthlyInterest = this.calculateMonthlyInterest(leftValue);
+          this.list.push(new Payment(i, leftValue, monthlyPayment + 0.70, monthlyInterest, 0.70));
+          leftValue = leftValue - (monthlyPayment - monthlyInterest);
+        }
+        console.log(this.list);
+      }else{
+        alert("We are sorry, we cannot give you a loan");
+      }
+
+    }if(this.ifalone == false){
+      if(monthlyPayment<this.incomeValue+this.deptorsValue){
+
+        for (let i: number = 1; i <= this.period; i++)
+        {
+          monthlyInterest = this.calculateMonthlyInterest(leftValue);
+          this.list.push(new Payment(i, leftValue, monthlyPayment + 0.70, monthlyInterest, 0.70));
+          leftValue = leftValue - (monthlyPayment - monthlyInterest);
+        }
+        console.log(this.list);
+      }else{
+        alert("We are sorry, we cannot give you a loan");
+      }
     }
-    console.log(this.list);
+
+
     //return this.list;
   }
+
   changeMarriedStateToAlone()
   {
     this.ifalone = true;
   }
+
   changeMarriedStateToMarried()
   {
     this.ifalone = false;
   }
-  calculateMonthlyPayment(lvalue: number, period: number)
+
+  calculateMonthlyPayment(lvalue: number)
   {
     return lvalue * (0.16/this.period) / (1 - Math.pow((1 + 0.16/this.period) , (this.period * -1)));
   }
+
   calculateMonthlyInterest(lvalue: number)
   {
     return lvalue * 0.16/this.period;
   }
 }
+
+
+

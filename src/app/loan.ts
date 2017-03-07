@@ -11,7 +11,7 @@ class Loan {
   name: string;
   surname : string;
   personalid: number;
-  documenttype: string;
+  doctype: string;
   docnumber: number;
   country: string;
   cord: string;

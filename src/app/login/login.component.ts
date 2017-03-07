@@ -15,14 +15,11 @@ export class LoginComponent {
 
   admin : Admin = new Admin();
 
-  onSubmit(event, username : string, password : string) {
+  onSubmit(event) {
 
     event.preventDefault();
 
-    this.admin.username = username;
-    this.admin.password = password;
     this.loginService.login(this.admin).subscribe((result) => {
-      this.router.navigate['/admin'];
     });
   }
 

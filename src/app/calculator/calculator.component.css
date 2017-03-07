@@ -98,3 +98,17 @@ input[type=range]:focus::-ms-fill-upper {
   background: orange;
 }
 
+h4{
+  margin-left: 80px;
+}
+
+h3{
+  text-transform: uppercase;
+}
+
+td{
+  background: #eee;
+}
+
+body{
+}

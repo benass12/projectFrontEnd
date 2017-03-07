@@ -14,7 +14,7 @@ import {CalculatorComponent} from "./calculator/calculator.component";
 const appRoutes: Routes = [
   {
     path: '',
-    component: AppComponent
+    component: InformationComponent
   },
   {
     path: 'admin',

@@ -3,10 +3,7 @@
 <body>
 
 <header>
-  <div class="row">
-    <h3>CONSUMER LOAN CALCULATOR</h3>
-    <br>
-  </div>
+  <h3>Consumer loan calculator</h3>
 </header>
 <body>
 <div class="container border">
@@ -20,7 +17,7 @@
       Period of loan (years)
     </div>
     <div class="col-sm-4 text-right">
-      <input class="form-control" type="number" id="loanPeriodYears" #loanPeriodYears required value="1" min="1" max="60">
+      <input class="form-control" type="number" id="loanPeriodYears" #loanPeriodYears required value="1" min="1" max="5">
     </div>
     <div class="col-sm-4 text-right">
     </div>
@@ -42,7 +39,7 @@
     <div class="col-sm-2">
       <input type="radio" name="optradio" checked="checked" (click)="changeMarriedStateToAlone()"> Alone
     </div>
-    <input type="radio" name="optradio" (click)="changeMarriedStateToMarried()"> With my partner/co-debtor
+    <input type="radio" name="optradio" (click)="changeMarriedStateToMarried()"> With my partner
   </div>
   <hr/>
   <div class="row">
@@ -61,7 +58,7 @@
   </div>
   <div *ngIf="!ifalone" class="row">
     <div class="col-sm-4 text-right">
-      Your partner's/co-debtor's monthly income
+      Your partner's monthly income
     </div>
     <div class="col-sm-4">
       <input type="range" style="background-size: contain" id="deptorsValue" name="deptorsValue" [(ngModel)]="deptorsValue" min="245" max="5000">
@@ -71,7 +68,7 @@
     </div>
   </div>
 
-  <div class="col-sm-12 text-right">
+  <div style="text-align:center;">
     <button type="button" class="btn button2 button-size forbuttons" (click)="showValue(loanValue, loanPeriodYears.value)">Calculate</button>
   </div>
 
@@ -80,11 +77,10 @@
 </div>
 </body>
 <hr/>
+
+<h3>Calculated payment for loan</h3>
 <div *ngIf="isPressed" class="error" >
-  <header>
-    <div class="container">
-      <h3>Calculated payment for loan (monthly)</h3></div>
-  </header>
+
   <div class="container">
     <table class="table table-striped" >
       <thead class="thead-inverse">

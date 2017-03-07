@@ -12,25 +12,25 @@ export class FormService {
     loanamount:number, loanyear:number, loanmonth:string, loanday:number, name:string, surname:string, personalcode:number, documenttype:string, documentnumber:number, country:string, cord:string, address:string, numberfront1:string,
     number1:string, numberfront2:string, number2:string, email:string, inaftertaxes:number
   ): Promise<any>{
-    console.log("cj suveike");
-    console.log(loanamount);
-    console.log(loanyear);
-    console.log(loanmonth);
-    console.log(loanday);
-    console.log(name);
-    console.log(surname);
-    console.log(personalcode);
-    console.log(documenttype);
-    console.log(documentnumber);
-    console.log(country);
-    console.log(cord);
-    console.log(address);
-    console.log(numberfront1);
-    console.log(number1);
-    console.log(numberfront2);
-    console.log(number2);
-    console.log(email);
-    console.log(inaftertaxes);
+
+    // console.log(loanamount);
+    // console.log(loanyear);
+    // console.log(loanmonth);
+    // console.log(loanday);
+    // console.log(name);
+    // console.log(surname);
+    // console.log(personalcode);
+    // console.log(documenttype);
+    // console.log(documentnumber);
+    // console.log(country);
+    // console.log(cord);
+    // console.log(address);
+    // console.log(numberfront1);
+    // console.log(number1);
+    // console.log(numberfront2);
+    // console.log(number2);
+    // console.log(email);
+    // console.log(inaftertaxes);
 
     // let headers = new Headers();
     // headers.append('Content-Type', 'application/json');
@@ -44,14 +44,14 @@ export class FormService {
         "name": name,
         "surname": surname,
         "paymentday": loanday,
-        "termdate" : "adsda",
+        "termdate" : "Loan year: "+ loanyear + " Loan month: " + loanmonth,
         "country": country,
         "city": cord,
         "address": address,
         "salarywithtaxes": inaftertaxes,
         "email" : email,
-        "phone1": "123 ",
-        "phone2": "213"
+        "phone1": numberfront1 + number1,
+        "phone2": numberfront2 + number2
 
         // value: 1115,
         // personalid: "",

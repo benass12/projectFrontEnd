@@ -1,8 +1,8 @@
 <div class="wrapper">
   <form class="form-signin">
     <h2 class="form-signin-heading">Please login</h2>
-    <input type="text" class="form-control" name="username" placeholder="Username" id="user" required="" autofocus="" />
-    <input type="password" class="form-control" name="password" id="pass" placeholder="Password" required=""/>
-    <button class="btn btn-lg btn-primary btn-block" (click) ="onSubmit($event, form?.username, form?.password)">Login</button>
+    <input type="text" class="form-control" name="username" [(ngModel)]="admin.username" placeholder="Username" id="user" required="" autofocus="" />
+    <input type="password" class="form-control" [(ngModel)]="admin.password" name="password" id="pass" placeholder="Password" required=""/>
+    <button class="btn btn-lg btn-primary btn-block" href="admin" (click) ="onSubmit($event, form?.username, form?.password)">Login</button>
   </form>
 </div>
